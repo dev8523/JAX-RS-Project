@@ -5,4 +5,5 @@ This is a Messenger Application which is built using Java API (Application Progr
 You will need a local server in running state.
 
 # URI Info
-http://localhost:8080/messenger/webapi/come/ - will give you all the list of
+http://localhost:8080/messenger/webapi/come/ - will give you all the list of author name, system date, id & message related to that.
+

@@ -13,9 +13,9 @@ public class MessageDaoImpl {
 	private Map<Long, Message> messages = DatabaseClass.getMessages();
 	
 	public MessageDaoImpl() {
-		messages.put(1L, new Message(1, "gogo", "Debasish"));
-		messages.put(2L, new Message(2, "hoho", "Ashish"));
-		messages.put(3L, new Message(3, "lala", "Wasim"));
+		messages.put(1L, new Message(1, "First Message", "Author1"));
+		messages.put(2L, new Message(2, "Second Message", "Author2"));
+		messages.put(3L, new Message(3, "Third Message", "Author3"));
 	}
 
 	public List<Message> getAllMessages() {

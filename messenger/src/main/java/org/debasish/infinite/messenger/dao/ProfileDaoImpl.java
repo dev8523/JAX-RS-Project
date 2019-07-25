@@ -12,8 +12,8 @@ public class ProfileDaoImpl {
 	private Map<String, Profile> profiles = DatabaseClass.getProfiles();
 
 	public ProfileDaoImpl() {
-		profiles.put("data1", new Profile(1, "facebook", "ashish", "mota"));
-		profiles.put("data2", new Profile(2, "twitter", "wasim", "akram"));
+		profiles.put("data1", new Profile(1, "facebook", "FirstName1", "LastName1"));
+		profiles.put("data2", new Profile(2, "twitter", "FirstName2", "LastName2"));
 	}
 	public List<Profile> getAllProfiles() {
 		return new ArrayList<Profile>(profiles.values());		

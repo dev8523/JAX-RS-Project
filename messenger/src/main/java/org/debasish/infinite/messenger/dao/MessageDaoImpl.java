@@ -32,6 +32,7 @@ public class MessageDaoImpl {
 		return message;
 	}
 	
+	// Never return null,we can use Optional 
 	public Message updateMessage(Message message) {
 		if(message.getId() <= 0) {
 			return null;

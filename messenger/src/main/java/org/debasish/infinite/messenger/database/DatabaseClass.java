@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.debasish.infinite.messenger.model.Message;
-import org.debasish.infinite.messenger.model.Profile;
+
 
 public class DatabaseClass {
 

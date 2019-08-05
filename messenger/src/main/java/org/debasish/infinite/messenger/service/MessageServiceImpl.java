@@ -19,22 +19,22 @@ import org.debasish.infinite.messenger.model.Message;
 public class MessageServiceImpl {
 
 	MessageDaoImpl messageDao = new MessageDaoImpl();
-	
+
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Message> getMessages() {
-		
+
 		return messageDao.getAllMessages();
 	}
-	
+
 	@GET
-	@Path("/{messageId}")	//here messageId is a variable
+	@Path("/{messageId}") // here messageId is a variable
 	@Produces(MediaType.APPLICATION_JSON)
-	public Message getMessage(@PathParam("messageId") long id) //provide same variable name as in@Path
-	{	
+	public Message getMessage(@PathParam("messageId") long id) // provide same variable name as in@Path
+	{
 		return messageDao.getMessage(id);
 	}
-	
+
 	@POST
 	@Path("/add")
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -42,23 +42,21 @@ public class MessageServiceImpl {
 	public Message addMessage(Message message) {
 		return messageDao.addMessage(message);
 	}
-	
+
 	@PUT
 	@Path("/{messageID}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Message updateMessage(@PathParam("messageID") long id, Message message) {
+	public String updateMessage(@PathParam("messageID") long id, Message message) {
 		message.setId(id);
 		return messageDao.updateMessage(message);
 	}
-	
+
 	@DELETE
 	@Path("/{msgId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public void deleteMesssage(@PathParam("msgId")long id) {
+	public void deleteMesssage(@PathParam("msgId") long id) {
 		messageDao.removeMessage(id);
 	}
-	
-	
-	
+
 }

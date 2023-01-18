@@ -32,7 +32,7 @@ public class MessageDaoImpl {
 		return message;
 	}
 
-	// Never return null,we can use Optional
+	// Never return null, we can use Optional
 	public String updateMessage(Message message) {
 		Optional<Long> checkNull = Optional.ofNullable(message.getId());
 		if (message.getId() <= 0 || !checkNull.isPresent()) {
